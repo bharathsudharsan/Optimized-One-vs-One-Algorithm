@@ -185,7 +185,7 @@ void loop()
     call_fn.set("C", 0.1);
     Serial.println();   
     trainSamples = readSerialNumber("Enter a train set size ", TRAIN_SAMPLES - 2);
-    retrain_cycles = readSerialNumber("Enter the times to cycly over the train set", 100);
+    retrain_cycles = readSerialNumber("Enter the times to cycle over the train set", 100);
 
     if (trainSamples == 0 || retrain_cycles == 0)
         return;
@@ -206,27 +206,27 @@ void loop()
     
     // Predict using onboard trained classifier
     start = millis();
-    for (int i = 0; i < TEST_SAMPLES; i++) 
+    for (int i = 0; i < 10; i++) 
     {
-        int y_true = y_test[i];
-        int y_pred = call_fn.predict(X_test[i]);
+//        int y_true = y_test[i];
+        int y_pred = call_fn.predict(X_train[i]);
 
-        Serial.print("Predicted ");
-        Serial.print(y_pred);
-        Serial.print(" vs ");
-        Serial.println(y_true);
-        eval.truevsfalse(y_true, y_pred);
+//        Serial.print("Predicted ");
+//        Serial.print(y_pred);
+//       Serial.print(" vs ");
+//        Serial.println(y_true);
+//        eval.truevsfalse(y_true, y_pred);
     }
     Serial.print("It took ");
     temp = millis() - start;
     Serial.print(temp);
-    Serial.print("ms for infering using the full test set");
+    Serial.print("ms to infer for 10 samples");
     Serial.println();
-    Serial.print("Accuracy = ");
-    Serial.print(eval.accuracy() * 100);
-    Serial.print(" out of ");
-    Serial.print(eval.support());
-    Serial.println(" samples");
+ //   Serial.print("Accuracy = ");
+//    Serial.print(eval.accuracy() * 100);
+ //   Serial.print(" out of ");
+//    Serial.print(eval.support());
+  //  Serial.println(" samples");
     delay(1000);
 }
 
