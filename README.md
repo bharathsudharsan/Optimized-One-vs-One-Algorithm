@@ -8,7 +8,7 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 ### Datasets
 
-We converted the listed datasets into MCU executable *.h* files and placed them inside the algorithm folders, which are used for training multi-class classifiers on MCUs using *Opt-OVO*. The users have to uncomment their dataset of choice (header file at the beginning of the main algorithm program) to use it when training and inference on MCUs.
+We converted the listed datasets into MCU executable *.h* files and placed them inside the Opt-OVO folder, which are used for training multi-class classifiers on MCUs using *Opt-OVO*. The users have to uncomment their dataset of choice (header file at the beginning of the main algorithm program) to use it when training and inference on MCUs.
 
 1. [MNIST Handwritten Digits](http://yann.lecun.com/exdb/mnist/) (64 features, 10 classes, 1797 samples): Data for each digits 0 to 9 is a class. The onboard *Opt-OVO* trained multi-class classifier should distinguish digits, based on the input features.
 2. [Australian Sign Language signs](https://archive.ics.uci.edu/ml/datasets/Australian+Sign+Language+signs+(High+Quality)) (22 features, 95 classes, 6650 samples): Here, the class count is 50 since we extracted the files that contain data of 50 Auslan signs varying from *alive* to *more*. Then using *Opt-OVO*, we trained classifiers on MCUs, that distinguish Auslan signs based on the input features.
@@ -23,6 +23,10 @@ Using Arduino IDE, we upload the *Opt-OVO* algorithm along with the selected/unc
 4. B4 [nRF52840 Adafruit Feather](https://www.adafruit.com/product/4062): ARM Cortex-M4 @64MHz, 1MB Flash, 256KB SRAM.
 
 ## Opt-OVO Performance Evaluation
+
+For evaluation, we selected two multi-class datasets using which the Opt-OVO algorithm trains multi-class classifiers on B1-B4. For the first evaluation round, we use the same 64 features Handwritten Digits dataset. Here, we built 3 train sets of various class counts and sizes. For the first train set, we extract data fields corresponding to the handwritten digits 0 to 2 to build a 3 class train set of size 432. The second train set is of class count 5 (digits 0 to 4) and size 720. The last train set of size 1467 contains 10 classes (digits 0 to 9). In all the 3 train sets, each class is of the size 144. 
+
+The second round of evaluation was performed using the 22 features Australian Sign Language signs dataset. Here, we built 8 train sets of different class counts and sizes. For the first train set, we extract data fields corresponding to the **alive, all** and **answer** Auslan signs. Hence, the first set is of class count 3 and size 75. The last set is of class count 50 and size 1250 since it contains data of 50 Auslan signs varying from **alive** to **more**. The in-between train sets contain class counts ranging from 3 to 50, with their corresponding train set size ranging from 0 to 1250. In all the 8 train sets, each class is of the size 25.
 
 We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then power on each board, connect them to a PC via the serial port to feed the training data, receive training time and classification accuracy from MCUs. The first 70% of data was used for training, the remaining 30% data for evaluation. When we instruct the board to train, *Opt-OVO* iteratively loads the data chunks and trains. Next, we load the test set, infer using the trained models to evaluate the MCU-trained classifiers. 
 
