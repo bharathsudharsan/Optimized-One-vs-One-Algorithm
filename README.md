@@ -15,7 +15,7 @@ We converted all the listed datasets into MCU executable *.h* files and placed t
 
 ### MCU Boards
 
-Using Arduino IDE, as required, we upload the *Opt-OVO* algorithm along with the selected/uncommented dataset on the following popular boards. After successful upload, we trained various ML classifier models (both binary and multi-class) on MCUs, performed the onboard model evaluation and inference performance evaluation of the thus trained MCU models.
+Using Arduino IDE, we upload the *Opt-OVO* algorithm along with the selected/uncommented dataset on the following popular boards. After successful upload, we trained various ML classifier models on MCUs, performed the onboard model evaluation and inference performance evaluation of the thus trained MCU models.
 
 1. B1 [Generic ESP32](https://www.espressif.com/en/products/devkits): Xtensa LX6 @240MHz, 4MB Flash, 520KB SRAM.
 2. B2 [ATSAMD21G18 Adafruit METRO](https://www.adafruit.com/product/3505): ARM Cortex-M0+ @48 MHz, 256kB Flash, 32KB SRAM. 
