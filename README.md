@@ -32,6 +32,18 @@ We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then 
 
 The following analysis is made from the above Figure:
 
+Training Set Size vs Training Time
+
+Even on the slowest B2 (Adafruit Metro), the Opt-OVO was able to train using a 10 class, 1476 size, 64 dimension Digits dataset in 29.6 sec and could train in 7.6 sec using the 15 class, 375 size, 22 features Australian Sign dataset. 
+
+The fastest B1 trained in 0.4 sec for Digits and in 4.7 sec using the 50 class, 1250 size Sign dataset. 
+
+In Fig. a, at the individual MCU board level, we show how the training time varies when the class count and train set size increase. 
+
+We are not presenting the explicit performance comparing of the classifiers trained using Opt-OVO, with the classifiers trained on high resource setups using Python scikit-learn since we achieve similar accuracies when experimenting using the same setup and datasets. Also, we are not comparing the training time on MCUs with CPUs and edge GPUs since they have Approx. 10^6 times higher hardware resources.
+
+Using Opt-OVO, users can increase the class count beyond 50 and train without stability issues when they use the emerging better resource MCUs with inbuilt FPU, KPU, FFT hardware capabilities.
+
 ### Inference Results
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.png)
