@@ -1,1 +1,4 @@
-# Optimized-One-vs-One-Algorithm
+# Training up to 50 Class ML Models on Arduino MCUs and Real-time Inference 
+
+Multi-class classifier training using traditional meta-algorithms such as the popular One-vs-One (OvO) method may not always work well under cost-sensitive setups. Also, during inference, OVO becomes computationally challenging for higher class counts K as O(K^2) is its time complexity. In this repo, we present code of Opt-OVO, which is an optimized (resource-friendly) version of One-vs-One algorithm which enables high-performance multi-class ML classifier training and inference directly on microcontroller units (MCUs). 
+Opt-OVO enables billions of resource-constrained IoT devices to self learn/train (offline) after their deployment, using live data from a wide range of IoT use-cases. We demonstrate Opt-OVO by performing live ML model training on 4 popular MCU boards using datasets of varying class counts, sizes and feature dimensions. The most exciting finding was, on the  3 $ ESP32, Opt-OVO trained a multi-class ML classifier using a dataset of class count 50 and performed unit inference in super real-time of 6.2 ms.
