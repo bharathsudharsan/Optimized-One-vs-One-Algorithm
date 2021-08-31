@@ -28,6 +28,7 @@ We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then 
 
 ### Training Results - Training Set Size vs Training Time
 
+
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Train_time_results.png)
 
 The following analysis is made from the above Figure:
@@ -41,6 +42,7 @@ The following analysis is made from the above Figure:
 **AIoT boards:** Using Opt-OVO, users can increase the class count beyond 50 and train without stability issues when they use the emerging AIoT boards like Sipeed MAIX Bit, M5 StickV, Sipeed Maix Amigo that have inbuilt FPU, KPU, FFT hardware capabilities.
 
 ### Inference Results - Class Size vs Inference Time
+
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.png)
 
