@@ -38,12 +38,22 @@ We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then 
 
 3. In Fig. a, at the individual MCU board level, we show how the training time varies when the class count and train set size increase. 
 
-We are not presenting the explicit performance comparing of the classifiers trained using Opt-OVO, with the classifiers trained on high resource setups using *Python scikit-learn* since we achieve similar accuracies when experimenting using the same setup and datasets. Also, we are not comparing the training time on MCUs with CPUs and edge GPUs since they have Approx. 10^6 times higher hardware resources.
-
 **AIoT boards:** Using Opt-OVO, users can increase the class count beyond 50 and train without stability issues when they use the emerging AIoT boards like Sipeed MAIX Bit, M5 StickV, Sipeed Maix Amigo that have inbuilt FPU, KPU, FFT hardware capabilities.
 
 ### Inference Results
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.png)
 
-The following analysis is made from the above Figure:
+**Class Size vs Inference Time.** 
+
+To analyze the impact of increasing class count on inference time, in above Fig (left), we feed the Opt-OVO trained models a multi-class data sample (size one) with class count ranging from 0 to 10 and from 0 to 50 in above Fig (right). For statistical validation, the plotted inference time corresponds to the average of 5 runs. The following analysis is made from the above Fig:
+
+1. Even for the high dimensional Digits dataset, our method achieves real-time unit inference, 11.8 ms, even on the slowest B2. 
+
+2. The fastest B1 was able to infer for a 50 class input in 6.2 ms. 
+
+3. In Fig (right), when the class count increased from 15 to 25, the inference time increased by 0.9 ms, from 25 to 40 by 2.4ms and 40 to 50 by 2.2 ms, showing an almost linear relationship. 
+
+4. Overall, it is apparent that the Opt-OVO trained classifiers perform onboard unit inference for multi-class data in super real-time, within a second, across various MCUs.
+
+We are not presenting the explicit performance comparing of the classifiers trained using Opt-OVO, with the classifiers trained on high resource setups using *Python scikit-learn* since we achieve similar accuracies when experimenting using the same setup and datasets. Also, we are not comparing the training time on MCUs with CPUs and edge GPUs since they have Approx. 10^6 times higher hardware resources.
