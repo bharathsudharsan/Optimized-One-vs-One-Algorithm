@@ -26,11 +26,11 @@ Using Arduino IDE, we upload the *Opt-OVO* algorithm along with the selected/unc
 
 We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then power on each board, connect them to a PC via the serial port to feed the training data, receive training time and classification accuracy from MCUs. The first 70% of data was used for training, the remaining 30% data for evaluation. When we instruct the board to train, *Opt-OVO* iteratively loads the data chunks and trains. Next, we load the test set, infer using the trained models to evaluate the MCU-trained classifiers. 
 
-### Training Results
+### Training Results - Training Set Size vs Training Time
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Train_time_results.png)
 
-**Training Set Size vs Training Time.** The following analysis is made from the above Figure:
+The following analysis is made from the above Figure:
 
 1. Even on the slowest B2 (Adafruit Metro), the Opt-OVO was able to train using a 10 class, 1476 size, 64 dimension Digits dataset in 29.6 sec and could train in 7.6 sec using the 15 class, 375 size, 22 features Australian Sign dataset. 
 
@@ -40,11 +40,9 @@ We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then 
 
 **AIoT boards:** Using Opt-OVO, users can increase the class count beyond 50 and train without stability issues when they use the emerging AIoT boards like Sipeed MAIX Bit, M5 StickV, Sipeed Maix Amigo that have inbuilt FPU, KPU, FFT hardware capabilities.
 
-### Inference Results
+### Inference Results - Class Size vs Inference Time
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.png)
-
-**Class Size vs Inference Time.** 
 
 To analyze the impact of increasing class count on inference time, in above Fig (left), we feed the Opt-OVO trained models a multi-class data sample (size one) with class count ranging from 0 to 10 and from 0 to 50 in above Fig (right). For statistical validation, the plotted inference time corresponds to the average of 5 runs. The following analysis is made from the above Fig:
 
