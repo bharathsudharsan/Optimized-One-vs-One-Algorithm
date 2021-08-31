@@ -56,4 +56,6 @@ To analyze the impact of increasing class count on inference time, in above Fig 
 
 4. Overall, it is apparent that the Opt-OVO trained classifiers perform onboard unit inference for multi-class data in super real-time, within a second, across various MCUs.
 
-We are not presenting the explicit performance comparing of the classifiers trained using Opt-OVO, with the classifiers trained on high resource setups using *Python scikit-learn* since we achieve similar accuracies when experimenting using the same setup and datasets. Also, we are not comparing the training time on MCUs with CPUs and edge GPUs since they have Approx. 10^6 times higher hardware resources.
+### Onboard Accuracy
+
+The accuracy of the Opt-OVO trained models on MCUs with the train samples used are provided in [Train_time_and_accuracy_results.xlsx](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Train_time_and_accuracy_results.xlsx). We are not presenting the explicit performance comparing of the classifiers trained using Opt-OVO, with the classifiers trained on high resource setups using *Python scikit-learn* since we achieve similar accuracies when experimenting using the same setup and datasets. 
