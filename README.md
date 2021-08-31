@@ -24,6 +24,8 @@ Using Arduino IDE, we upload the *Opt-OVO* algorithm along with the selected/unc
 
 ## Opt-OVO Performance Evaluation
 
+### Procedure
+
 For evaluation, we selected two multi-class datasets using which the Opt-OVO algorithm trains multi-class classifiers on B1-B4. For the first evaluation round, we use the same 64 features Handwritten Digits dataset. Here, we built 3 train sets of various class counts and sizes. For the first train set, we extract data fields corresponding to the handwritten digits 0 to 2 to build a 3 class train set of size 432. The second train set is of class count 5 (digits 0 to 4) and size 720. The last train set of size 1467 contains 10 classes (digits 0 to 9). In all the 3 train sets, each class is of the size 144. 
 
 The second round of evaluation was performed using the 22 features Australian Sign Language signs dataset. Here, we built 8 train sets of different class counts and sizes. For the first train set, we extract data fields corresponding to the **alive, all** and **answer** Auslan signs. Hence, the first set is of class count 3 and size 75. The last set is of class count 50 and size 1250 since it contains data of 50 Auslan signs varying from **alive** to **more**. The in-between train sets contain class counts ranging from 3 to 50, with their corresponding train set size ranging from 0 to 1250. In all the 8 train sets, each class is of the size 25.
