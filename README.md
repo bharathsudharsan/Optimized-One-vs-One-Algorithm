@@ -30,6 +30,10 @@ We uploaded the *Opt-OVO* algorithm's C++ implementation on all boards. We then 
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Train_time_results.png)
 
+The following analysis is made from the above Figure:
+
 ### Inference Results
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.png)
+
+The following analysis is made from the above Figure:
