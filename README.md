@@ -4,30 +4,23 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 **Exciting Finding:** On the  3 $ ESP32, Opt-OVO trained a multi-class ML classifier using a dataset of class count 50 and performed unit inference in super real-time of 6.2 ms.
 
-**Training on MCUs Demo:**
+**Demo:** In progress
 
 ## Table of contents
 
-<!--ts-->
-   * [Opt-OVO Algorithm](#Opt-OVO Algorithm Design)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [GitHub token](#github-token)
-      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
-   * [Docker](#docker)
-     * [Local](#local)
-     * [Public](#public)
-<!--te-->
+- [Training up to 50 Class ML Models on Arduino MCUs and Real-time Inference](#training-up-to-50-class-ml-models-on-arduino-mcus-and-real-time-inference)
+  * [Opt-OVO Algorithm](#opt-ovo-algorithm)
+  * [Datasets, MCU boards for Training and Inference on MCUs](#datasets--mcu-boards-for-training-and-inference-on-mcus)
+    + [Datasets](#datasets)
+    + [MCU Boards](#mcu-boards)
+  * [Opt-OVO Performance Evaluation](#opt-ovo-performance-evaluation)
+    + [Procedure](#procedure)
+    + [Training Results - Training Set Size vs Training Time](#training-results---training-set-size-vs-training-time)
+    + [Inference Results - Class Size vs Inference Time](#inference-results---class-size-vs-inference-time)
+    + [Accuracy of MCUs Trained Models](#accuracy-of-mcus-trained-models)
+  * [Extras](#extras)
 
-
-## Opt-OVO Algorithm Design
+## Opt-OVO Algorithm
 
 
 
