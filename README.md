@@ -8,7 +8,6 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 ## Table of contents
 
-- [Training up to 50 Class ML Models on Arduino MCUs and Real-time Inference](#training-up-to-50-class-ml-models-on-arduino-mcus-and-real-time-inference)
   * [Opt-OVO Algorithm](#opt-ovo-algorithm)
   * [Datasets, MCU boards for Training and Inference on MCUs](#datasets--mcu-boards-for-training-and-inference-on-mcus)
     + [Datasets](#datasets)
