@@ -2,7 +2,9 @@
 
 In this repo, we provide the code of Opt-OVO, which is an optimized (resource-friendly) version of the popular One-vs-One algorithm which enables high-performance multi-class ML classifier training and inference directly on microcontroller units (MCUs). We evaluate Opt-OVO by performing live ML model training on 4 popular MCU boards using datasets of varying class counts, sizes and feature dimensions.  
 
-**Exciting finding** On the  3 $ ESP32, Opt-OVO trained a multi-class ML classifier using a dataset of class count 50 and performed unit inference in super real-time of 6.2 ms.
+**Exciting Finding:** On the  3 $ ESP32, Opt-OVO trained a multi-class ML classifier using a dataset of class count 50 and performed unit inference in super real-time of 6.2 ms.
+
+**Training on MCUs Demo:**
 
 ## Table of contents
 
@@ -87,14 +89,14 @@ To analyze the impact of increasing class count on inference time, in above Fig 
 
 4. Overall, it is apparent that the Opt-OVO trained classifiers perform onboard unit inference for multi-class data in super real-time, within a second, across various MCUs.
 
-### Onboard Accuracy
+### Accuracy of MCUs Trained Models
 
 The accuracy of the Opt-OVO trained models on MCUs with the train samples used are provided in [Train_time_and_accuracy_results.xlsx](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Train_time_and_accuracy_results.xlsx). We are not presenting the explicit performance comparing of the classifiers trained using Opt-OVO, with the classifiers trained on high resource setups using *Python scikit-learn* since we achieve similar accuracies when experimenting using the same setup and datasets. 
 
 ## Extras
 
 **Additional Datasets:** In [TinyML datasets](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/tree/main/TinyML%20Datasets) folder, the following 7 datasets are made available as *.h* files that can be used for training and inference using *Opt-OVO* on MCU boards. The details in brackets are samples size x features count x classes count.
-1. [EMG](https://archive.ics.uci.edu/ml/datasets/EMG+data+for+gestures) (1648 x 63 x 5 ): Raw EMG data recorded by MYO Thalmic bracelet worn on a users forearm. This bracelet is equipped with eight sensors equally spaced around the forearm that simultaneously acquire myographic signals. The signals are sent through a Bluetooth interface to a PC.
+1. [EMG](https://archive.ics.uci.edu/ml/datasets/EMG+data+for+gestures) (1648 x 63 x 5 ): Raw EMG data recorded by MYO Thalmic bracelet worn on a users forearm. This bracelet is equipped with eight sensors equally spaced around the forearm that simultaneously acquire myographic signals.
 2. [Gas Sensor Array Drift](https://archive.ics.uci.edu/ml/datasets/Gas+Sensor+Array+Drift+Dataset) (1000 x 128 x 6): Contains measurements from 16 chemical sensors utilized in simulations for drift compensation in a discrimination task of 6 gases at various levels of concentrations.
 3. [Gesture Phase Segmentaion](https://archive.ics.uci.edu/ml/datasets/gesture+phase+segmentation) (1000 x 19 x 5):  Contains features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.
 4. [Human Activity](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones) (10299 x 561 x 6): Database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
