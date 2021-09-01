@@ -9,7 +9,7 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 ## Table of contents
 
   * [Opt-OVO Algorithm](#opt-ovo-algorithm)
-  * [Datasets, MCU boards for Training and Inference on MCUs](#datasets--mcu-boards-for-training-and-inference-on-mcus)
+  * [Datasets, MCU Boards for Training and Inference on MCUs](#datasets--mcu-boards-for-training-and-inference-on-mcus)
     + [Datasets](#datasets)
     + [MCU Boards](#mcu-boards)
   * [Opt-OVO Performance Evaluation](#opt-ovo-performance-evaluation)
@@ -23,11 +23,11 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 
 
-## Datasets, MCU boards for Training and Inference on MCUs
+## Datasets, MCU Boards for Training and Inference on MCUs
 
 ### Datasets
 
-We converted the listed datasets into MCU executable *.h* files and placed them inside the Opt-OVO folder, which are used for training multi-class classifiers on MCUs using *Opt-OVO*. The users have to uncomment their dataset of choice (header file at the beginning of the main algorithm program) to use it when training and inference on MCUs.
+We converted the listed datasets into MCU readable *.h* files and placed them inside the [Opt-OVO folder](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/tree/main/Opt-OVO), which are used for training multi-class classifiers on MCUs using *Opt-OVO*. The users have to uncomment their dataset of choice (header file at the beginning of the main algorithm program) to use it when training and inference on MCUs.
 
 1. [MNIST Handwritten Digits](http://yann.lecun.com/exdb/mnist/) (64 features, 10 classes, 1797 samples): Data for each digits 0 to 9 is a class. The onboard *Opt-OVO* trained multi-class classifier should distinguish digits, based on the input features.
 2. [Australian Sign Language signs](https://archive.ics.uci.edu/ml/datasets/Australian+Sign+Language+signs+(High+Quality)) (22 features, 95 classes, 6650 samples): Here, the class count is 50 since we extracted the files that contain data of 50 Auslan signs varying from *alive* to *more*. Then using *Opt-OVO*, we trained classifiers on MCUs, that distinguish Auslan signs based on the input features.
@@ -45,7 +45,7 @@ Using Arduino IDE, we upload the *Opt-OVO* algorithm along with the selected/unc
 
 ### Procedure
 
-For evaluation, we selected two multi-class datasets using which the Opt-OVO algorithm trains multi-class classifiers on B1-B4. For the first evaluation round, we use the same 64 features Handwritten Digits dataset. Here, we built 3 train sets of various class counts and sizes. For the first train set, we extract data fields corresponding to the handwritten digits 0 to 2 to build a 3 class train set of size 432. The second train set is of class count 5 (digits 0 to 4) and size 720. The last train set of size 1476 contains 10 classes (digits 0 to 9). In all the 3 train sets, each class is of the size 144. 
+For evaluation, we selected two multi-class datasets using which the Opt-OVO algorithm trains multi-class classifiers on B1-B4. For the first evaluation round, we use the 64 features Handwritten Digits dataset. Here, we built 3 train sets of various class counts and sizes. For the first train set, we extract data fields corresponding to the handwritten digits 0 to 2 to build a 3 class train set of size 432. The second train set is of class count 5 (digits 0 to 4) and size 720. The last train set of size 1476 contains 10 classes (digits 0 to 9). In all the 3 train sets, each class is of the size 144. 
 
 The second round of evaluation was performed using the 22 features Australian Sign Language signs dataset. Here, we built 8 train sets of different class counts and sizes. For the first train set, we extract data fields corresponding to the **alive, all** and **answer** Auslan signs. Hence, the first set is of class count 3 and size 75. The last set is of class count 50 and size 1250 since it contains data of 50 Auslan signs varying from **alive** to **more**. The in-between train sets contain class counts ranging from 3 to 50, with their corresponding train set size ranging from 0 to 1250. In all the 8 train sets, each class is of the size 25.
 
