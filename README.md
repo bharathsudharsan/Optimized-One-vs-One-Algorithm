@@ -23,6 +23,8 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Opt-OVO-Algorithm.png)
 
+The above *Opt-OVO* algorithm detailed explanation is available at our IoT Journal paper [ML-MCU paper](https://ieeexplore.ieee.org/document/9490288)
+
 ## Datasets, MCU Boards for Training and Inference on MCUs
 
 ### Datasets
