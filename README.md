@@ -21,11 +21,11 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 ## Opt-OVO Algorithm
 
-Currently, trainable algorithms are attached to an existing model deployed on MCUs to perform online/continuous learning (For e.g., [TinyTL](https://arxiv.org/abs/2007.11622), [TinyOL](https://arxiv.org/abs/2103.08295)). The training of a full multi-class ML classifier on commodity MCUs, using any existing algorithms is currently not feasible. When analyzing the OVO method, we discovered that the OVO's k(k-1)/2 base learners/classifiers, for a few datasets, contain classifiers that lack significant contributions to the overall multi-class classification result - this occurs when a classifier is already within a big interdependent group. Hence in *Opt-OVO*, we propose to identify and remove the less important base classifiers to improve the resource-friendliness of OVO. 
+Currently, trainable algorithms are attached to an existing model deployed on MCUs to perform online/continuous learning (for e.g., [TinyTL](https://arxiv.org/abs/2007.11622), [TinyOL](https://arxiv.org/abs/2103.08295)). The training of a full multi-class ML classifier on commodity MCUs, using any existing algorithms is currently not feasible. When analyzing the OVO method, we discovered that the OVO's k(k-1)/2 base learners/classifiers, for a few datasets, contain classifiers that lack significant contributions to the overall multi-class classification result - this occurs when a classifier is already within a big interdependent group. Hence in *Opt-OVO*, we propose to identify and remove the less important base classifiers to improve the resource-friendliness of OVO. The *Opt-OVO* algorithm is shown below - detailed explanation available in our IoT Journal paper [ML-MCU paper](https://ieeexplore.ieee.org/document/9490288). 
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Opt-OVO-Algorithm.png)
 
-The above *Opt-OVO* algorithm detailed explanation is available at our IoT Journal paper [ML-MCU paper](https://ieeexplore.ieee.org/document/9490288).
+
 
 ## Datasets, MCU Boards for Training and Inference on MCUs
 
