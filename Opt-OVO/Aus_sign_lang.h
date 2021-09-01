@@ -3,6 +3,8 @@
 #define NUM_CLASSES 50
 #define TRAIN_SAMPLES 40
 
+// The below rows are a part of the Australian Sign Language signs dataset that has 22 features, 95 classes, 6650 samples (rows)
+
 float X_train[TRAIN_SAMPLES][FEATURES_DIM] = {
 
 {-0.097816,-0.127761,-0.029051,0.537977,0.249162,0.508908,0.239445,0.039819,0.000000,0.007009,0.019041,0.046011,-0.106124,-0.006852,0.369149,0.381857,0.570995,0.343431,0.000000,0.000000,0.000000,0.133088},
@@ -48,4 +50,4 @@ float X_train[TRAIN_SAMPLES][FEATURES_DIM] = {
 
 };
 
-int y_train[TRAIN_SAMPLES] = { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 };
+int y_train[TRAIN_SAMPLES] = { 1,2,1,3,2,1,1,4,1,2,1,1,4,2,1,1,3,1,2,1,4,1,1,1,5,1,1,3,1,1,5,1,4,1,1,5,1,1,4,1 };
