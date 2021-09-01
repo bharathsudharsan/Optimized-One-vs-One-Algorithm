@@ -23,7 +23,7 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 Currently, trainable algorithms are attached to an existing model deployed on MCUs to perform online/continuous learning (for e.g., [TinyTL](https://arxiv.org/abs/2007.11622), [TinyOL](https://arxiv.org/abs/2103.08295)). The training of a full multi-class ML classifier on commodity MCUs, using any existing algorithms is currently not feasible. When analyzing the OVO method, we discovered that the OVO's k(k-1)/2 base learners/classifiers, for a few datasets, contain classifiers that lack significant contributions to the overall multi-class classification result - this occurs when a classifier is already within a big interdependent group. Hence in *Opt-OVO*, we propose to identify and remove the less important base classifiers to improve the resource-friendliness of OVO. 
 
-![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Opt-OVO-Algorithm.png)
+![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Opt-OVO_Algorithm.png)
 
 **Opt-OVO 4-steps brief explanation.** In **Step1**, the k(k-1)/2 base classifiers b_i belonging to B are trained with the unseen/fresh local data stream using base learner of choice like SVM, LDA, followed by evaluation of all thus trained base classifiers. Here, each base classifiers b_i produces a binary output ∈ {-1, +1} for each input vector x^(n). In **Step2**, for all test data, we store outcomes of base learners R_i in R_B. Then, we create a correlation matrix C_m using the output of base classifiers stored in R_B. From C_m, we find Corr_{class}, which is the group of highly correlated base classifiers. In **Step3**, from the groups of this found correlated base learners, we create a Probability Table (PT) of each group to know the joint probability of the outcome R_B. These PTs provide the joint probabilities of the outcomes R_B and the groups of correlated classifiers b_{corr} ⊂ Corr_{class} when evaluating using new/unseen data. In **Step4**, finally, we classify for any new multi-class input x^(n) by using thus produced Corr_{class} and set of base classifiers B.
 
@@ -77,7 +77,7 @@ The following analysis is made from the above Figure:
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.png)
 
-To analyze the impact of increasing class count on inference time, in above Fig (left), we feed the Opt-OVO trained models a multi-class data sample (size one) with class count ranging from 0 to 10 and from 0 to 50 in above Fig (right). For statistical validation, the plotted inference time corresponds to the average of 5 runs. The following analysis is made from the above Fig:
+To analyze the impact of increasing class count on inference time, in above Fig (left), we feed the Opt-OVO trained models a multi-class data sample (size one) with class count ranging from 0 to 10 and from 0 to 50 in above Fig (right). For statistical validation, the plotted inference time corresponds to the average of 5 runs. The results (inference performance) are provided in [Infer_time_results.xlsx](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Infer_time_results.xlsx). The following analysis is made from the above Fig:
 
 1. Even for the high dimensional Digits dataset, our method achieves real-time unit inference, 11.8 ms, even on the slowest B2. 
 
