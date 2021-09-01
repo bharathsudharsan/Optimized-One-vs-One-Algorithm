@@ -27,7 +27,7 @@ Currently, trainable algorithms are attached to an existing model deployed on MC
 
 **Opt-OVO 4-steps brief explanation.** In **Step1**, the k(k-1)/2 base classifiers b_i belonging to B are trained with the unseen/fresh local data stream using base learner of choice like SVM, LDA, followed by evaluation of all thus trained base classifiers. Here, each base classifiers b_i produces a binary output ∈ {-1, +1} for each input vector x^(n). In **Step2**, for all test data, we store outcomes of base learners R_i in R_B. Then, we create a correlation matrix C_m using the output of base classifiers stored in R_B. From C_m, we find Corr_{class}, which is the group of highly correlated base classifiers. In **Step3**, from the groups of this found correlated base learners, we create a Probability Table (PT) of each group to know the joint probability of the outcome R_B. These PTs provide the joint probabilities of the outcomes R_B and the groups of correlated classifiers b_{corr} ⊂ Corr_{class} when evaluating using new/unseen data. In **Step4**, finally, we classify for any new multi-class input x^(n) by using thus produced Corr_{class} and set of base classifiers B.
 
-The *Opt-OVO* algorithm detailed explanation available in our IoT Journal [ML-MCU paper](https://ieeexplore.ieee.org/document/9490288).
+The *Opt-OVO* algorithm detailed explanation available in our IoT Journal paper [ML-MCU](https://ieeexplore.ieee.org/document/9490288).
 
 ## Datasets, MCU Boards for Training and Inference on MCUs
 
