@@ -62,7 +62,7 @@ We uploaded the *Opt-OVO* algorithm's C implementation on all boards. We then po
 
 ![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Train_time_results.png)
 
-The following analysis is made from the above Figure:
+The following analysis is made from the above Fig:
 
 1. Even on the slowest B2 (Adafruit Metro), the Opt-OVO was able to train using a 10 class, 1476 size, 64 dimension Digits dataset in 29.6 sec and could train in 7.6 sec using the 15 class, 375 size, 22 features Australian Sign dataset. 
 
