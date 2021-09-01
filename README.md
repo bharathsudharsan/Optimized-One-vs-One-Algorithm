@@ -21,9 +21,7 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 ## Opt-OVO Algorithm
 
-```math
-C_n = \left\{(x_1,\dots,x_n): -1 \le x_i \le 1\right\}
-```
+![alt text](https://github.com/bharathsudharsan/Optimized-One-vs-One-Algorithm/blob/main/Opt-OVO-Algorithm.png)
 
 ## Datasets, MCU Boards for Training and Inference on MCUs
 
