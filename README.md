@@ -6,7 +6,7 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 **Demo:** Video recording in progress
 
-## Table of contents
+## Table of Contents
 
   * [Opt-OVO Algorithm](#opt-ovo-algorithm)
   * [Datasets, MCU Boards for Training and Inference on MCUs](#datasets--mcu-boards-for-training-and-inference-on-mcus)
