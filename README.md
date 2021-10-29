@@ -4,8 +4,6 @@ In this repo, we provide the code of Opt-OVO, which is an optimized (resource-fr
 
 **Exciting Finding:** On the  3 $ ESP32, Opt-OVO trained a multi-class ML classifier using a dataset of class count 50 and performed unit inference in super real-time of 6.2 ms.
 
-**Demo:** Video recording in progress
-
 ## Table of Contents
 
   * [Opt-OVO Algorithm](#opt-ovo-algorithm)
