@@ -1,9 +1,10 @@
+// Only sample data is given here to avoid overflow error on tiny Arduino boards. When want to load more rows, the code needs to be altered to take training input via serial port.
+// Other full TinyML datasets available at: https://github.com/bharathsudharsan/ML-MCU/tree/master/TinyML%20Datasets
+
 #pragma once
 #define FEATURES_DIM 64
 #define NUM_CLASSES 10
 #define TRAIN_SAMPLES 102
-
-// The below rows are a part of the MNIST Handwritten Digits dataset that has 64 features, 10 classes, 1797 samples (rows)
 
 float X_train[TRAIN_SAMPLES][FEATURES_DIM] = {
         {   0.000000  ,  0.000000  ,  0.090240  ,  0.234625  ,  0.162433  ,  0.018048  ,  0.000000  ,  0.000000  ,  0.000000  ,  0.000000  ,  0.234625  ,  0.270721  ,  0.180481  ,  0.270721  ,  0.090240  ,  0.000000  ,  0.000000  ,  0.054144  ,  0.270721  ,  0.036096  ,  0.000000  ,  0.198529  ,  0.144385  ,  0.000000  ,  0.000000  ,  0.072192  ,  0.216577  ,  0.000000  ,  0.000000  ,  0.144385  ,  0.144385  ,  0.000000  ,  0.000000  ,  0.090240  ,  0.144385  ,  0.000000  ,  0.000000  ,  0.162433  ,  0.144385  ,  0.000000  ,  0.000000  ,  0.072192  ,  0.198529  ,  0.000000  ,  0.018048  ,  0.216577  ,  0.126337  ,  0.000000  ,  0.000000  ,  0.036096  ,  0.252673  ,  0.090240  ,  0.180481  ,  0.216577  ,  0.000000  ,  0.000000  ,  0.000000  ,  0.000000  ,  0.108288  ,  0.234625  ,  0.180481  ,  0.000000  ,  0.000000  ,  0.000000  },
