@@ -100,9 +100,16 @@ The accuracy of the Opt-OVO trained models on MCUs with the train samples used a
 6. [Sensorless Drive Diagnosis](https://archive.ics.uci.edu/ml/datasets/dataset+for+sensorless+drive+diagnosis)  (1000 x 48 x 11): Features are extracted from motor current. The motor has intact and defective components. This results in 11 different classes with different conditions.
 7. [Sport Activity](https://archive.ics.uci.edu/ml/datasets/Daily+and+Sports+Activities) (4800 x 180 x 10): The dataset comprises motion sensor data of 19 daily and sports activities each performed by 8 subjects in their own style for 5 minutes. Five Xsens MTx units are used on the torso, arms, and legs.
  
-**If the code is useful, please consider citing ML-MCU and Edge2Train papers using the BibTex entry below.**
+**If the code is useful, please consider citing below papers using the BibTex entry.**
 
 ```
+@inproceedings{sudharsan2021train,
+  title={Train++: An Incremental ML Model Training Algorithm to Create Self-Learning IoT Devices},
+  author={Sudharsan, Bharath and Yadav, Piyush and Breslin, John G and Ali, Muhammad Intizar},
+  booktitle={Proceedings of the 18th IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2021)},
+  year={2021}
+  }
+
 @inproceedings{sudharsan2020edge2train,
   title={Edge2train: a framework to train machine learning models (svms) on resource-constrained iot edge devices},
   author={Sudharsan, Bharath and Breslin, John G and Ali, Muhammad Intizar},
@@ -112,7 +119,7 @@ The accuracy of the Opt-OVO trained models on MCUs with the train samples used a
 
 @inproceedings{sudharsan2021optovo,
   title={Training up to 50 Class ML Models on 3 $ IoT Hardware viaOptimizing One-vs-One Algorithm},
-  author={Sudharsan, Bharath and Dolan, Paul and Maczko, Istvan and Fraser, James and Coleho, David and Ifergan, Omri and Kennedy, Eoghan and Neto, Esdras and Nguyen, Duc-Duy and Yadav, Piyush and Breslin, John G.},
+  author={Sudharsan, Bharath},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2022}
   }
