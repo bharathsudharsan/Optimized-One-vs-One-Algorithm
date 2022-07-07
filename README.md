@@ -117,12 +117,15 @@ The accuracy of the Opt-OVO trained models on MCUs with the train samples used a
   year={2020}
   }
 
-@inproceedings{sudharsan2021optovo,
-  title={Training up to 50 Class ML Models on 3 $ IoT Hardware viaOptimizing One-vs-One Algorithm},
+@inproceedings{sudharsan2022training,
+  title={Training Up to 50 Class ML Models on 3$ IoT Hardware via Optimizing One-vs-One Algorithm (Student Abstract)},
   author={Sudharsan, Bharath},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={11},
+  pages={13059--13060},
   year={2022}
-  }
+}
   
 @article{sudharsan2021mlmcu,
   title={ML-MCU: A Framework to Train ML Classifierson MCU-based IoT Edge Devices},
